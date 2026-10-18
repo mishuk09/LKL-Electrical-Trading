@@ -1,6 +1,6 @@
 # LKL Electrical Trading
 
-A single-page Next.js website with TypeScript, reusable section components, global CSS, and the supplied business photography.
+A single-page Next.js website with TypeScript, reusable section components, Tailwind CSS, and the supplied business photography.
 
 ## Run locally
 
@@ -16,7 +16,7 @@ Open http://localhost:3000. For a production build, run `npm run build`, then `n
 - `src/lib/business.ts`: phone, WhatsApp, address, store and map links, photo paths.
 - `src/lib/reviews.json`: all 17 supplied customer reviews. Relative timestamps are deliberately not displayed because they become stale.
 - `src/components/`: one file per website section. Reviews and the mobile menu are the only client components.
-- `src/app/globals.css`: theme tokens in `:root` and responsive styles.
+- `src/app/globals.css`: unchanged `:root` tokens, Tailwind theme aliases, responsive token values, and global element defaults.
 - `public/images/`: website copies of the supplied images. Original reference files are preserved.
 
 ## Content to confirm before launch
@@ -31,3 +31,14 @@ Open http://localhost:3000. For a production build, run `npm run build`, then `n
 ## Checks
 
 `npm run typecheck` checks TypeScript. `npm run build` creates the production Next.js build.
+
+## Tailwind styling
+
+Component styling lives in `className` utility strings. Theme utilities such as `bg-primary` and `text-primary` reference the original CSS variables through `@theme inline`.
+
+- Tailwind Preflight is intentionally omitted to retain the original browser defaults.
+- Exact inclusive 560px, 850px, 1100px, and 1600px boundaries use arbitrary media variants. Range variants prevent overlapping responsive values from changing the original cascade.
+- Descendant variants style repeated child elements. `data-slot` attributes identify shared elements such as headings and links; they are not custom CSS classes.
+- Content, contact links, component structure, menu state, review pagination, hover effects, focus styles, and reduced-motion behavior are retained.
+
+Migration checks: production build; original-versus-Tailwind geometry, decoration, text, and link comparison at 360, 560, 561, 768, 850, 851, 1024, 1100, 1101, 1440, and 1600px; expanded mobile menu comparison; navigation closing and review wraparound checks.

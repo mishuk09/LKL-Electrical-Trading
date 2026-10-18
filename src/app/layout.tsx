@@ -11,7 +11,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <a href="#main" className="skip-link">
+        <a
+          href="#main"
+          className="fixed left-[16px] top-[-100px] z-[100] bg-white pt-[12px] pr-[12px] pb-[12px] pl-[12px] [&:focus]:top-[12px]"
+        >
           Skip to content
         </a>
         {children}

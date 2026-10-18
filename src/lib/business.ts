@@ -23,7 +23,7 @@ export const navigation = [
   "Contact",
 ];
 export const photos = {
-  hero: "/images/unnamed (4).jpg",
+  hero: "/images/home.jpg",
   technician: "/images/unnamed (3).jpg",
   installation: "/images/unnamed.jpg",
   shop: "/images/unnamed (5).jpg",

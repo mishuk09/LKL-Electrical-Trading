@@ -32,8 +32,11 @@ const categories = [
 ];
 export default function Products() {
   return (
-    <section className="section container products" id="products">
-      <div className="products-intro">
+    <section
+      className="w-[min(var(--container),_calc(100%_-_64px))] [@media(560px<width<=850px)]:w-[calc(100%_-_40px)] [@media(width<=560px)]:w-[calc(100%_-_36px)] mx-auto pt-[var(--section-space)] pb-[var(--section-space)] grid grid-cols-[0.85fr_1.2fr] [@media(width<=850px)]:grid-cols-[1fr] items-center gap-[85px] [@media(850px<width<=1100px)]:gap-[45px] [@media(width<=850px)]:gap-[35px]"
+      id="products"
+    >
+      <div className="[&_>_p]:mt-0 [&_>_p]:mr-0 [&_>_p]:mb-[28px] [&_>_p]:ml-0 [&_>_p]:text-[14px] [&_>_p]:max-w-[380px] [@media(width<=850px)]:[&_>_p]:max-w-[600px]">
         <Heading eyebrow="PARTS, JUST A CLICK AWAY">
           The right part.
           <br />
@@ -46,7 +49,7 @@ export default function Products() {
         <Action href={business.shopee} external>
           Visit our Shopee store
         </Action>
-        <div className="store-note">
+        <div className="flex items-center mt-[30px] text-primary gap-[12px] [&_strong]:text-[13px] [&_strong]:block [&_strong]:text-ink [&_small]:text-muted [&_small]:text-[11px]">
           <ShoppingBag size={29} />
           <span>
             <strong>LA Electrical</strong>
@@ -54,20 +57,20 @@ export default function Products() {
           </span>
         </div>
       </div>
-      <div className="product-grid">
+      <div className="grid grid-cols-[1fr_1fr] gap-[20px] [@media(width<=560px)]:gap-[12px]">
         {categories.map(({ name, description, Icon }) => (
           <a
             href={business.shopee}
             target="_blank"
             rel="noopener noreferrer"
-            className="product-card"
+            className="[border:1px_solid_var(--line)] rounded-[var(--radius)] overflow-hidden [transition:transform_0.2s] [&:hover]:[transform:translateY(-4px)]"
             key={name}
           >
-            <div className="product-illustration">
+            <div className="h-[153px] [@media(560px<width<=850px)]:h-[180px] [@media(width<=560px)]:h-[130px] relative grid place-items-center bg-soft text-primary overflow-hidden [&_>_svg]:z-[1] [&_>_svg]:[transform:rotate(-12deg)] [@media(width<=560px)]:[&_>_svg]:w-[65px]">
               <Icon strokeWidth={1} size={78} />
-              <span className="product-orbit" />
+              <span className="absolute w-[122px] h-[122px] [border:1px_solid_#b63a5320] rounded-[50%] [&::after]:content-[''] [&::after]:absolute [&::after]:[inset:-20px] [&::after]:[border:1px_solid_#b63a5310] [&::after]:rounded-[50%]" />
             </div>
-            <div className="product-info">
+            <div className="pt-[20px] [@media(width<=560px)]:pt-[16px] pr-[20px] [@media(width<=560px)]:pr-[12px] pb-[20px] [@media(width<=560px)]:pb-[16px] pl-[20px] [@media(width<=560px)]:pl-[12px] [&_h3]:text-[16px] [@media(width<=560px)]:[&_h3]:text-[15px] [&_p]:text-[11px] [@media(width<=560px)]:[&_p]:text-[10px] [&_p]:mt-[8px] [&_p]:mr-0 [&_p]:mb-[15px] [&_p]:ml-0 [&_>_span]:flex [&_>_span]:items-center [&_>_span]:justify-between [&_>_span]:text-primary [&_>_span]:text-[11px] [@media(width<=560px)]:[&_>_span]:text-[10px] [&_>_span]:font-bold [@media(width<=560px)]:[&_h3]:leading-[1.3]">
               <h3>{name}</h3>
               <p>{description}</p>
               <span>
