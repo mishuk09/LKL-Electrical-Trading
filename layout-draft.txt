@@ -1,0 +1,80 @@
+Here is the complete and properly structured **Section 2 (Project Scope)** for your Next.js single-page application, incorporating all the requested sections, your Shopee e-commerce integration, and precise details:
+
+---
+
+## 2. Project Scope (Single-Page Next.js App)
+
+The application will be built as a high-performance single-page layout with smooth scrolling navigation, divided into the following modular components:
+
+1. **Header / Navigation Bar:**
+* Fixed top menu featuring brand identity and quick navigation links (*About, Services, Products, Reviews, Gallery, Contact*).
+* Includes a prominent, persistent **"WhatsApp Us"** action button for immediate lead generation.
+
+
+2. **Hero Section:**
+* **Visuals:** Clean, professional background imagery highlighting the shopfront and quality technician work.
+* **Copywriting:** Compelling headline and subheadline emphasizing trusted air conditioning and electrical contractor services in Melaka.
+* **Primary CTAs:** Quick-access buttons for direct calling and WhatsApp chats.
+
+
+3. **About Us Section (with Trust & Authority Bar):**
+* Introduces the background of LKL Electrical Trading located in Taman Kota Laksamana, Malacca.
+
+
+* Highlights authorized dealership and partnership status with major brands (e.g., Daikin, Midea).
+
+
+* **Trust & Authority Bar:** Features core performance indicators prominently, including the **4.9⭐ rating from 131+ Google reviews** to establish instant credibility.
+
+
+
+
+4. **Services Showcase:**
+* A structured grid outlining core contractor capabilities with clear descriptions and icons:
+* *Aircond Installation:* Residential wall-mounted units to heavy-duty commercial ceiling cassette units (e.g., 3HP REVO).
+
+
+* *Aircond Servicing & Chemical Wash:* Routine maintenance and performance optimization.
+* *Dismantling & Relocation:* Safe indoor and outdoor unit removal.
+
+
+* *Electrical & Parts Contracting:* General wiring, troubleshooting, and electrical solutions.
+
+
+
+
+5. **"Explore Our Products" (Shopee E-Commerce Section):**
+* Bridges physical contracting services with your online retail store (**LA Electrical** on Shopee Malaysia).
+
+
+* **Section Components:**
+* Catchy title and description highlighting online spare parts availability.
+* Official Shopee Store badge and rating snapshot (`shopee.com.my/laelectrical`).
+
+
+* Category breakdown showing aircon spare parts, installation materials, and accessories (e.g., Remote Controls, Capacitors, Copper Pipes, Relays, and Aircond Motors).
+
+
+* Featured product cards with direct **"Buy on Shopee"** external links to drive traffic and sales.
+
+
+
+
+6. **Customer Reviews / Social Proof:**
+* Displays curated testimonials and highlights from real Google reviews praising service efficiency, fair pricing, and neat workmanship.
+
+
+
+
+7. **Gallery / Recent Projects:**
+* A visual image grid showcasing completed residential and commercial projects, neat piping/wiring setups, and recent installations.
+
+
+8. **Contact & Footer Section:**
+* Complete business information: Physical address (No. 12 & 13, Jalan TKL, Taman Kota Laksamana, 75200 Melaka), operating hours, and direct contact numbers (016-626 1222).
+
+
+* **Embedded Google Map:** Interactive map showing your exact location for local customers.
+
+
+* Direct footer links to social channels and your official Shopee storefront.

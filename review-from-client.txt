@@ -1,0 +1,121 @@
+[
+  {
+    "reviewer_name": "Amal Iqmal",
+    "profile_details": "2 reviews · 2 photos",
+    "rating": 5,
+    "time_ago": "5 months ago",
+    "review_text": "The work was carried out professionally, efficiently, and with great attention to detail. Your team demonstrated good workmanship, excellent service, and ensured that the installation area was left clean and tidy upon completion. Aircond is functioning well, and we are satisfied with the overall quality of service provided."
+  },
+  {
+    "reviewer_name": "ivy teng",
+    "profile_details": "2 reviews · 1 photo",
+    "rating": 5,
+    "time_ago": "9 months ago",
+    "review_text": "Yesterday, two Daikin 1hp air conditioners were installed. I'm very satisfied with their work. The owner also provided excellent service. Most importantly, the price was fair. I feel confident buying from them and using them with peace of … More"
+  },
+  {
+    "reviewer_name": "Christheophany",
+    "profile_details": "1 review",
+    "rating": 5,
+    "time_ago": "2 months ago",
+    "review_text": "I guess most people's review with LKL Electrical would evolve around installing Air-Conditioners, besides other services they provide. In my case it was more towards dismantling my indoor and outdoor Air-Conditiong units. … More"
+  },
+  {
+    "reviewer_name": "Siti Humaira",
+    "profile_details": "3 reviews · 2 photos",
+    "rating": 5,
+    "time_ago": "7 months ago",
+    "review_text": "Good service. The staff are very responsible and helpful. The price is also reasonable. Highly recommended"
+  },
+  {
+    "reviewer_name": "Aizat Zainal",
+    "profile_details": "Local Guide · 12 reviews · 4 photos",
+    "rating": 5,
+    "time_ago": "9 months ago",
+    "review_text": "Friendly boss. Excellent service. Got my daikin revo max with a very good price 👍 …"
+  },
+  {
+    "reviewer_name": "Faieez J",
+    "profile_details": "2 reviews · 1 photo",
+    "rating": 5,
+    "time_ago": "4 months ago",
+    "review_text": "Good sevices, fast response, friendly seller, best price and recommended."
+  },
+  {
+    "reviewer_name": "MUHAMAD RIDHWAN BIN OTHMAN",
+    "profile_details": "Local Guide · 25 reviews · 18 photos",
+    "rating": 5,
+    "time_ago": "3 months ago",
+    "review_text": "Great installation service. The installer arrived on time, worked neatly, and completed the job professionally. Everything was installed properly, and the area was cleaned before leaving. Highly recommended!"
+  },
+  {
+    "reviewer_name": "Ehsan Awaludin",
+    "profile_details": "4 reviews",
+    "rating": 5,
+    "time_ago": "2 months ago",
+    "review_text": "great service, fast delivery and meticolus work, already repeat countless time from this shop, thank you and keep up the good work"
+  },
+  {
+    "reviewer_name": "JIMMYs VideoLog",
+    "profile_details": "Local Guide · 84 reviews · 64 photos",
+    "rating": 5,
+    "time_ago": "2 months ago",
+    "review_text": "Good service done. Response to enquiries very fast. Hope to get more air conditioners if all goes well."
+  },
+  {
+    "reviewer_name": "Chong HoeChin",
+    "profile_details": "3 reviews · 1 photo",
+    "rating": 5,
+    "time_ago": "7 months ago",
+    "review_text": "Professional and clean installation. The technician was punctual and helpful. Very satisfied with the service. Highly recommended!"
+  },
+  {
+    "reviewer_name": "Teng Suzanne",
+    "profile_details": "Local Guide · 15 reviews · 8 photos",
+    "rating": 5,
+    "time_ago": "6 months ago",
+    "review_text": "Excellent service, super duper fast and efficient fitting service. I will repeat purchase in the future."
+  },
+  {
+    "reviewer_name": "Muhammad Shukry",
+    "profile_details": "3 reviews · 3 photos",
+    "rating": 5,
+    "time_ago": "6 months ago",
+    "review_text": "Installations Midea Chione 2.0HP done. Unit running normal ✅"
+  },
+  {
+    "reviewer_name": "Aini Izzanis Razali",
+    "profile_details": "2 reviews",
+    "rating": 5,
+    "time_ago": "4 months ago",
+    "review_text": "Fast deal — agreed on Friday, payment made on Monday, aircond installed on Tuesday."
+  },
+  {
+    "reviewer_name": "MANSOR RAHMAT",
+    "profile_details": "1 review",
+    "rating": 5,
+    "time_ago": "5 months ago",
+    "review_text": "Friendly Boss Louis… Excellent service. Got my Midea 5 star Inverter with a very good price…."
+  },
+  {
+    "reviewer_name": "mohd irwan shah mohd rabu",
+    "profile_details": "1 review · 1 photo",
+    "rating": 5,
+    "time_ago": "5 months ago",
+    "review_text": "Good n affordable service"
+  },
+  {
+    "reviewer_name": "Capoo",
+    "profile_details": "1 review · 2 photos",
+    "rating": 5,
+    "time_ago": "a year ago",
+    "review_text": "Good service\nCompetitive price\nMidea 5 star Inverter Avigator👍 …"
+  },
+  {
+    "reviewer_name": "Nur Amalina Mat",
+    "profile_details": "3 reviews · 3 photos",
+    "rating": 5,
+    "time_ago": "7 months ago",
+    "review_text": "Best service, best price for aircond. Staff also great in helping us."
+  }
+]
