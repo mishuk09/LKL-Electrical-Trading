@@ -7,7 +7,8 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import { business, navigation, photos, whatsapp } from "@/lib/business";
-import { Action, Brand } from "./ui";
+import { Action } from "./ui";
+import MainLogo from "./mainlogo";
 export default function Footer() {
   return (
     <>
@@ -42,7 +43,7 @@ export default function Footer() {
           </div>
           <div className="grid grid-cols-[1.4fr_0.8fr_1fr_1.1fr] [@media(width<=850px)]:grid-cols-[1.3fr_1fr] pt-0 pr-0 pb-[55px] [@media(width<=560px)]:pb-[35px] pl-0 gap-[45px] [@media(850px<width<=1100px)]:gap-[25px] [@media(560px<width<=850px)]:gap-[35px] [&_h3]:text-[15px] [&_h3]:mt-[4px] [&_h3]:mr-0 [&_h3]:mb-[23px] [&_h3]:ml-0 [&_>_div_>_a:not([data-slot~='brand'])]:block [&_>_div_>_a:not([data-slot~='brand'])]:text-[12px] [@media(width<=560px)]:[&_>_div_>_a:not([data-slot~='brand'])]:text-[11px] [&_>_div_>_a:not([data-slot~='brand'])]:text-[#c4cbd7] [&_>_div_>_a:not([data-slot~='brand'])]:mb-[10px] [&_a:hover]:text-[#f0aabb] [&_[data-slot~='footer-contact']]:flex! [&_[data-slot~='footer-contact']]:items-center [&_[data-slot~='footer-contact']]:mb-[20px]! [&_[data-slot~='footer-contact']]:gap-[13px] [@media(width<=560px)]:gap-y-[35px] [@media(width<=560px)]:gap-x-[20px] [@media(width<=560px)]:[&_>_div:last-child]:col-[1/-1]">
             <div className="[&_p]:text-[12px] [&_p]:text-[#b9c3d2] [&_p]:max-w-[250px] [@media(width<=560px)]:[&_p]:max-w-[300px] [&_p]:mt-[20px] [&_p]:mr-0 [&_p]:mb-[20px] [&_p]:ml-0 [@media(width<=560px)]:col-[1/-1]">
-              <Brand />
+              <MainLogo />
               <p>
                 Your local partner for air conditioning, electrical solutions,
                 and spare parts in Melaka.

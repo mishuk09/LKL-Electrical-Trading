@@ -1,26 +1,6 @@
 import { ArrowUpRight, Wind } from "lucide-react";
 import type { ReactNode } from "react";
 
-export function Brand() {
-  return (
-    <a
-      data-slot="brand"
-      className="inline-flex items-center leading-[1] shrink-0 gap-[10px] [@media(width<=560px)]:gap-[6px] [&_strong]:text-[31px] [@media(width<=560px)]:[&_strong]:text-[26px] [&_strong]:font-extrabold [&_strong]:tracking-[-1.5px] [&_small]:block [&_small]:text-[8px] [@media(width<=560px)]:[&_small]:text-[6px] [&_small]:font-bold [&_small]:tracking-[1.7px] [@media(width<=560px)]:[&_small]:tracking-[1px] [&_small]:mt-[7px]"
-      href="#home"
-      aria-label="LKL Electrical Trading home"
-    >
-      <span className="grid place-items-center [border:1.5px_solid_var(--primary)] rounded-[50%] w-[46px] [@media(width<=560px)]:w-[37px] h-[46px] [@media(width<=560px)]:h-[37px] text-primary [@media(width<=560px)]:[&_svg]:w-[24px]">
-        <Wind size={29} />
-      </span>
-      <span>
-        <strong>
-          LKL<span className="text-primary">.</span>
-        </strong>
-        <small>ELECTRICAL TRADING</small>
-      </span>
-    </a>
-  );
-}
 export function Action({
   href,
   children,

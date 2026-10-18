@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Clock3, MapPin, Menu, Phone, X } from "lucide-react";
 import { business, navigation, whatsapp } from "@/lib/business";
-import { Brand } from "./ui";
+import MainLogo from "./mainlogo";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Header() {
         </div>
       </div>
       <div className="w-[min(var(--container),_calc(100%_-_64px))] [@media(560px<width<=850px)]:w-[calc(100%_-_40px)] [@media(width<=560px)]:w-[calc(100%_-_36px)] mx-auto flex items-center justify-between h-[85px] [@media(560px<width<=850px)]:h-[74px] [@media(width<=560px)]:h-[70px] gap-[25px] [@media(560px<width<=1100px)]:gap-[15px] [@media(width<=560px)]:gap-[10px]">
-        <Brand />
+        <MainLogo />
         <nav
           id="main-navigation"
           aria-label="Main navigation"
