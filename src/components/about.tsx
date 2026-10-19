@@ -92,14 +92,29 @@ export default function About() {
           <ContactActions />
         </div>
       </div>
-      <div className="col-[1/-1] flex items-center justify-between [@media(width<=850px)]:justify-center [border-top:1px_solid_var(--line)] [border-bottom:1px_solid_var(--line)] pt-[28px] pr-0 pb-[28px] pl-0 gap-[30px] [@media(560px<width<=850px)]:gap-[25px] [@media(width<=560px)]:gap-[20px] [&_>_span:first-child]:text-[9px] [&_>_span:first-child]:tracking-[1.5px] [&_>_span:first-child]:text-muted [&_[data-slot~='daikin']]:text-[29px] [@media(width<=560px)]:[&_[data-slot~='daikin']]:text-[25px] [&_[data-slot~='daikin']]:italic [&_[data-slot~='daikin']]:tracking-[-1px] [&_[data-slot~='daikin']]:text-[#257eaa] [&_[data-slot~='midea']]:text-[29px] [@media(width<=560px)]:[&_[data-slot~='midea']]:text-[25px] [&_[data-slot~='midea']]:tracking-[-1px] [&_[data-slot~='midea']]:text-[#277aa4] [&_p]:text-[12px] [&_p_strong]:text-ink [@media(width<=850px)]:flex-wrap [@media(width<=850px)]:[&_>_span:first-child]:w-full [@media(width<=850px)]:[&_>_span:first-child]:text-center [@media(width<=560px)]:[&_p]:text-center [@media(width<=560px)]:[&_p]:w-full">
+      <div className="col-[1/-1] flex items-center justify-between [@media(width<=850px)]:justify-center [border-top:1px_solid_var(--line)] [border-bottom:1px_solid_var(--line)] pt-[28px] pr-0 pb-[28px] pl-0 gap-[30px] [@media(560px<width<=850px)]:gap-[25px] [@media(width<=560px)]:gap-[20px] [&_>_span:first-child]:text-[9px] [&_>_span:first-child]:tracking-[1.5px] [&_>_span:first-child]:text-muted [&_img]:h-auto [&_img]:object-contain [&_[data-slot~='daikin']]:w-[125px] [@media(width<=560px)]:[&_[data-slot~='daikin']]:w-[95px] [&_[data-slot~='midea']]:w-[110px] [@media(width<=560px)]:[&_[data-slot~='midea']]:w-[85px] [&_[data-slot~='shopee']]:w-[110px] [@media(width<=560px)]:[&_[data-slot~='shopee']]:w-[85px] [&_p]:text-[12px] [&_p_strong]:text-ink [@media(width<=850px)]:flex-wrap [@media(width<=850px)]:[&_>_span:first-child]:w-full [@media(width<=850px)]:[&_>_span:first-child]:text-center [@media(width<=560px)]:[&_p]:text-center [@media(width<=560px)]:[&_p]:w-full">
         <span>BRANDS WE WORK WITH</span>
-        <strong data-slot="daikin" className="">
-          DAIKIN
-        </strong>
-        <strong data-slot="midea" className="">
-          Midea
-        </strong>
+        <Image
+          data-slot="daikin"
+          src="/images/Daikin.png"
+          alt="Daikin"
+          width={125}
+          height={48}
+        />
+        <Image
+          data-slot="midea"
+          src="/images/Midea.png"
+          alt="Midea"
+          width={110}
+          height={48}
+        />
+        <Image
+          data-slot="shopee"
+          src="/images/shopee.png"
+          alt="Shopee"
+          width={110}
+          height={48}
+        />
         <span className="h-[35px] w-[1px] bg-line [@media(width<=850px)]:hidden" />
         <p>
           <strong>Local service.</strong> Established names. Lasting comfort.

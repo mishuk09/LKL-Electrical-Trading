@@ -1,4 +1,4 @@
-import { ArrowUpRight, Phone, Wind } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { business, whatsapp } from "@/lib/business";
@@ -90,7 +90,13 @@ export function Heading({
         data-slot="eyebrow"
         className="flex items-center text-[11px] font-bold tracking-[1.7px] text-primary mb-[19px] gap-[9px]"
       >
-        <Wind size={17} />
+        <Image
+          src="/images/icon.svg"
+          alt=""
+          width={17}
+          height={17}
+          className="h-[17px] w-[17px] object-contain"
+        />
         {eyebrow}
       </span>
       <h2>{children}</h2>
