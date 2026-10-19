@@ -1,29 +1,15 @@
 import Image from "next/image";
-import { existsSync } from "node:fs";
-import path from "node:path";
 import {
   ArrowUpRight,
-  ShoppingBag,
   Star,
   Package,
   Users,
   Store,
-  WashingMachine,
-  CookingPot,
-  Snowflake,
-  ShieldCheck,
-  Tv,
-  Plug,
-  Wrench,
-  Car,
-  Camera,
-  Shirt,
-  House,
-  PawPrint,
   MessageCircle,
 } from "lucide-react";
 import { business, photos, whatsapp } from "@/lib/business";
-import { Action, Heading } from "./ui";
+import { Heading } from "./ui";
+import CategoryCarousel from "./category-carousel";
 
 // Store figures are a snapshot from the supplied October 2026 Shopee reference.
 // Update these together when a newer store snapshot is available.
@@ -34,91 +20,80 @@ const storeStats = [
   { value: "9 years", label: "On Shopee", Icon: Store },
 ];
 
-// Add matching images to public/images/categories/. See that folder's README.
 // Keep category URLs pointed at the store until real Shopee category links are supplied.
 const categories = [
   {
     slug: "pencuci-pengering",
     name: "Pencuci & Pengering",
     english: "Washers & dryers",
-    Icon: WashingMachine,
   },
   {
     slug: "peralatan-dapur-besar",
     name: "Peralatan Dapur Besar",
     english: "Large kitchen appliances",
-    Icon: CookingPot,
   },
   {
     slug: "penyejuk-pemanas",
     name: "Penyejuk & Pemanas",
     english: "Cooling & heating",
-    Icon: Snowflake,
   },
   {
     slug: "keselamatan-pengawasan",
     name: "Keselamatan & Pengawasan",
     english: "Security & surveillance",
-    Icon: ShieldCheck,
   },
   {
     slug: "aksesori-tv",
     name: "Aksesori TV",
     english: "TV accessories",
-    Icon: Tv,
   },
   {
     slug: "peralatan-rumah-kecil",
     name: "Peralatan Rumah Kecil",
     english: "Small home appliances",
-    Icon: Plug,
   },
   {
     slug: "penambahbaikan-rumah",
     name: "Penambahbaikan Rumah",
     english: "Home improvement",
-    Icon: Wrench,
   },
   {
     slug: "alat-ganti-kereta",
     name: "Alat Ganti Kereta",
     english: "Car spare parts",
-    Icon: Car,
   },
   {
     slug: "aksesori-kamera",
     name: "Aksesori Kamera",
     english: "Camera accessories",
-    Icon: Camera,
   },
-  { slug: "baju", name: "Baju", english: "Clothing", Icon: Shirt },
+  { slug: "baju", name: "Baju", english: "Clothing" },
   {
     slug: "bekalan-perumahan",
     name: "Bekalan Perumahan",
     english: "Household supplies",
-    Icon: House,
   },
   {
     slug: "bekalan-haiwan-peliharaan",
     name: "Bekalan Haiwan Peliharaan",
     english: "Pet supplies",
-    Icon: PawPrint,
   },
 ];
 
+const categoryImages: Record<string, string> = {
+  "pencuci-pengering": "/images/pencuci.webp",
+  "peralatan-dapur-besar": "/images/peralantan.webp",
+  "penyejuk-pemanas": "/images/penyejuk.jpg",
+  "keselamatan-pengawasan": "/images/keselamatan.webp",
+  "aksesori-tv": "/images/aksesoritv.jpg",
+  "peralatan-rumah-kecil": "/images/peralatan.webp",
+  "penambahbaikan-rumah": "/images/penambahbaikan.jpg",
+  "alat-ganti-kereta": "/images/alat.jpg",
+  "aksesori-kamera": "/images/aksesorikamera.jpg",
+};
+
 function categoryImage(slug: string) {
-  // Resolve on the server so missing photos never produce broken images or 404s.
-  for (const extension of ["webp", "jpg", "jpeg", "png"]) {
-    const filename = `${slug}.${extension}`;
-    if (
-      existsSync(
-        path.join(process.cwd(), "public", "images", "categories", filename),
-      )
-    ) {
-      return `/images/categories/${filename}`;
-    }
-  }
-  return null;
+  return categoryImages[slug] ?? null;
 }
 
 export default function Products() {
@@ -140,21 +115,22 @@ export default function Products() {
             home. Discover the full range at LA Electrical, our store on Shopee
             Malaysia.
           </p>
-          <Action href={business.shopee} external>
-            Visit our Shopee store
-          </Action>
+          <a href={business.shopee} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[52px] items-center gap-[12px] rounded-full bg-[#F8492F] px-[22px] py-[12px] text-[13px] font-bold text-white transition-colors hover:bg-[#d93620] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F8492F]">
+            <Image src="/images/shopee.svg" alt="" width={23} height={23} className="brightness-0 invert" />
+            Visit our Shopee store <ArrowUpRight size={18} />
+          </a>
         </div>
       </div>
 
       <div className="overflow-hidden rounded-[var(--radius)] [border:1px_solid_var(--line)] [box-shadow:var(--shadow)]">
         <div className="grid min-[851px]:grid-cols-[1fr_1.65fr]">
-          <div className="relative overflow-hidden bg-navy px-[28px] py-[32px] text-white max-[560px]:px-[22px]">
+          <div className="relative overflow-hidden bg-navy border-t-[3px] border-solid border-[#F8492F] px-[28px] py-[32px] text-white max-[560px]:px-[22px]">
             <div
               aria-hidden="true"
               className="absolute -right-[50px] -top-[85px] h-[230px] w-[230px] rounded-full [border:1px_solid_#ffffff12]"
             />
-            <span className="relative mb-[22px] inline-flex items-center gap-[8px] text-[9px] font-bold tracking-[1.7px] text-[#e9a4b4]">
-              <ShoppingBag size={15} /> OUR SHOPEE STOREFRONT
+            <span className="relative mb-[22px] inline-flex items-center gap-[8px] text-[9px] font-bold tracking-[1.7px] text-[#ffb2a5]">
+              <Image src="/images/shopee.svg" alt="Shopee" width={22} height={22} /> OUR SHOPEE STOREFRONT
             </span>
             <div className="relative flex items-center gap-[16px]">
               <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden rounded-full [border:3px_solid_#ffffff35]">
@@ -195,14 +171,14 @@ export default function Products() {
               Explore our store <ArrowUpRight size={15} />
             </a>
           </div>
-          <div className="flex flex-col justify-center bg-soft px-[30px] py-[28px] max-[560px]:px-[20px]">
+          <div className="flex flex-col justify-center bg-[#fff6f3] px-[30px] py-[28px] max-[560px]:px-[20px]">
             <div className="grid grid-cols-2 gap-x-[24px] gap-y-[26px]">
               {storeStats.map(({ value, label, Icon }) => (
                 <div
                   key={label}
                   className="flex items-start gap-[12px] max-[560px]:gap-[9px]"
                 >
-                  <span className="mt-[4px] text-primary">
+                  <span className="mt-[4px] text-[#F8492F]">
                     <Icon size={20} strokeWidth={1.6} />
                   </span>
                   <div>
@@ -246,8 +222,8 @@ export default function Products() {
         </a>
       </div>
 
-      <div className="grid grid-cols-2 gap-[20px] min-[701px]:grid-cols-3 min-[1101px]:grid-cols-4 max-[560px]:gap-[12px]">
-        {categories.map(({ slug, name, english, Icon }, index) => {
+      <CategoryCarousel>
+        {categories.map(({ slug, name, english }, index) => {
           const image = categoryImage(slug);
           return (
             <a
@@ -264,8 +240,8 @@ export default function Products() {
                     src={image}
                     alt={name}
                     fill
-                    sizes="(max-width: 700px) 45vw, (max-width: 1100px) 30vw, 280px"
-                    className="object-contain p-[18px] transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 1023px) 45vw, 280px"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
                   <>
@@ -277,7 +253,7 @@ export default function Products() {
                       aria-hidden="true"
                       className="absolute h-[140px] w-[140px] rounded-full [border:1px_solid_#b63a530c] max-[560px]:h-[110px] max-[560px]:w-[110px]"
                     />
-                    <Icon
+                    <Package
                       size={49}
                       strokeWidth={1.1}
                       aria-hidden="true"
@@ -309,7 +285,7 @@ export default function Products() {
             </a>
           );
         })}
-      </div>
+      </CategoryCarousel>
 
       <div className="mt-[30px] flex flex-wrap items-center justify-between gap-[18px] rounded-[var(--radius)] bg-soft px-[25px] py-[23px] max-[560px]:px-[20px]">
         <div className="flex items-center gap-[14px]">
