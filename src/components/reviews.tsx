@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeCheck, Quote } from "lucide-react";
 import reviews from "@/lib/reviews.json";
 import { business } from "@/lib/business";
 import { Heading } from "./ui";
@@ -69,24 +69,30 @@ export default function Reviews() {
         >
           {reviews.slice(page * 2, page * 2 + 2).map((review) => (
             <article
-              className="[border:1px_solid_#ffffff25] rounded-[var(--radius)] pt-[27px] [@media(560px<width<=1100px)]:pt-[20px] [@media(width<=560px)]:pt-[24px] pr-[27px] [@media(560px<width<=1100px)]:pr-[20px] [@media(width<=560px)]:pr-[24px] pb-[27px] [@media(560px<width<=1100px)]:pb-[20px] [@media(width<=560px)]:pb-[24px] pl-[27px] [@media(560px<width<=1100px)]:pl-[20px] [@media(width<=560px)]:pl-[24px] min-h-[340px] [@media(560px<width<=850px)]:min-h-[300px] [@media(width<=560px)]:min-h-0 flex flex-col bg-[#ffffff03] [&_blockquote]:text-[14px] [@media(width<=560px)]:[&_blockquote]:text-[13px] [&_blockquote]:leading-[1.9] [&_blockquote]:mt-[23px] [&_blockquote]:mr-0 [&_blockquote]:mb-[27px] [&_blockquote]:ml-0 [&_blockquote]:text-[#f0f2f7]"
+              className="flex min-h-[340px] flex-col rounded-[var(--radius)] bg-white px-[27px] pb-[27px] pt-[27px] text-navy [border:1px_solid_#d9ddd9] [box-shadow:0_12px_30px_#00000012] [@media(560px<width<=1100px)]:px-[20px] [@media(560px<width<=1100px)]:pb-[20px] [@media(560px<width<=1100px)]:pt-[20px] [@media(width<=850px)]:min-h-[300px] [@media(width<=560px)]:min-h-0 [@media(width<=560px)]:px-[24px] [@media(width<=560px)]:pb-[24px] [@media(width<=560px)]:pt-[24px] [&_blockquote]:mt-[23px] [&_blockquote]:mr-0 [&_blockquote]:mb-[27px] [&_blockquote]:ml-0 [&_blockquote]:text-[14px] [&_blockquote]:leading-[1.9] [@media(width<=560px)]:[&_blockquote]:text-[13px]"
               key={review.reviewer_name}
             >
               <div className="flex justify-between items-center [&_>_svg]:text-[#d67b90] [&_>_svg]:stroke-[1]">
+                <Quote size={31} className="text-[#c44d25]!" />
+                <span className="flex items-center gap-[8px] text-[13px] font-semibold text-[#425466]">
+                  <BadgeCheck size={20} className="text-[#c44d25]" />
+                  Google review
+                </span>
+              </div>
+              <div className="mt-[28px]">
                 <span
                   data-slot="stars"
-                  className="text-[#e9ab56] text-[14px] tracking-[3px]"
+                  className="text-[#c44d25] text-[22px] tracking-[3px]"
                   aria-label={`${review.rating} out of 5 stars`}
                 >
                   ★★★★★
                 </span>
-                <Quote size={31} />
               </div>
               <blockquote>
                 {review.review_text.replace(/\s*… More$/, "…")}
               </blockquote>
-              <div className="flex items-center mt-auto [border-top:1px_solid_#ffffff1c] pt-[20px] gap-[10px] [&_strong]:text-[11px] [@media(width<=560px)]:[&_strong]:text-[12px] [&_strong]:block [&_strong]:leading-[1.5] [&_strong]:[overflow-wrap:anywhere] [&_small]:text-[10px] [&_small]:text-[#b5c1d3]">
-                <span className="rounded-[50%] w-[35px] h-[35px] bg-[#b63a5345] grid place-items-center text-[11px] shrink-0">
+              <div className="mt-auto flex items-center gap-[10px] [border-top:1px_solid_#d9ddd9] pt-[20px] [&_strong]:block [&_strong]:text-[11px] [&_strong]:leading-[1.5] [&_strong]:[overflow-wrap:anywhere] [@media(width<=560px)]:[&_strong]:text-[12px] [&_small]:text-[10px] [&_small]:text-[#607286]">
+                <span className="grid h-[55px] w-[55px] shrink-0 place-items-center rounded-[50%] bg-[#1c2b32] text-[14px] font-semibold text-white">
                   {review.reviewer_name
                     .split(" ")
                     .slice(0, 2)
@@ -95,14 +101,8 @@ export default function Reviews() {
                 </span>
                 <div>
                   <strong>{review.reviewer_name}</strong>
-                  <small>Google review</small>
+                  <small>Customer review</small>
                 </div>
-                <span
-                  className="text-[20px] font-bold ml-auto"
-                  aria-hidden="true"
-                >
-                  G
-                </span>
               </div>
             </article>
           ))}
