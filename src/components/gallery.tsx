@@ -14,12 +14,12 @@ const projects = [
     label: "COMPLETED INSTALLATION",
   },
   {
-    src: photos.outdoor,
+    src: photos.materials,
     title: "Attention to every detail",
     label: "ON THE JOB",
   },
   {
-    src: photos.installation,
+    src: photos.outdoor,
     title: "Making spaces more comfortable",
     label: "OUR WORK",
   },

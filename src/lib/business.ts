@@ -24,11 +24,11 @@ export const navigation = [
 ];
 export const photos = {
   hero: "/images/home.jpg",
-  technician: "/images/unnamed (3).jpg",
+  technician: "/images/daikin-person.jpg",
   installation: "/images/unnamed.jpg",
-  shop: "/images/unnamed (5).jpg",
+  shop: "/images/front.jpg",
   finished: "/images/unnamed (2).jpg",
-  materials: "/images/unnamed (1).jpg",
+  materials: "/images/materials.jpg",
   showroom: "/images/unnamed (6).jpg",
-  outdoor: "/images/unnamed (7).jpg",
+  outdoor: "/images/install.jpg",
 };
