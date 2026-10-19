@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowDown, ShieldCheck, Snowflake, Wrench, Zap } from "lucide-react";
-import { business, photos, whatsapp } from "@/lib/business";
-import { Action } from "./ui";
+import { photos } from "@/lib/business";
+import { ContactActions } from "./ui";
 
 export default function Hero() {
   return (
@@ -37,20 +37,7 @@ export default function Hero() {
             first installation to the parts you need, we keep your comfort
             running.
           </p>
-          <div
-            data-slot="actions"
-            className="flex items-center flex-wrap gap-[24px]"
-          >
-            <Action href={whatsapp()} external>
-              Let’s talk on WhatsApp
-            </Action>
-            <a
-              className="text-[12px] text-[#fff] [&_span]:ml-[9px]"
-              href={business.phoneHref}
-            >
-              Call {business.phone} <span>↗</span>
-            </a>
-          </div>
+          <ContactActions light />
           <div className="flex items-center mt-[37px] [@media(width<=560px)]:mt-[25px] gap-[13px] [&_strong]:text-[17px] [&_[data-slot~='stars']]:ml-[8px] [&_[data-slot~='stars']]:text-[12px] [&_small]:block [&_small]:text-[#e1e5ec] [&_small]:text-[10px] [@media(width<=560px)]:[&_small]:text-[9px] [&_small]:mt-[2px]">
             <span className="grid place-items-center w-[42px] h-[42px] bg-[#ffffff13] [border:1px_solid_#ffffff30] rounded-[50%]">
               <ShieldCheck size={23} />

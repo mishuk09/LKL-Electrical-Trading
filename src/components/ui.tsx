@@ -1,5 +1,6 @@
-import { ArrowUpRight, Wind } from "lucide-react";
+import { ArrowUpRight, Phone, Wind } from "lucide-react";
 import type { ReactNode } from "react";
+import { business, whatsapp } from "@/lib/business";
 
 export function Action({
   href,
@@ -25,6 +26,34 @@ export function Action({
     </a>
   );
 }
+
+export function ContactActions({
+  light = false,
+}: {
+  light?: boolean;
+}) {
+  return (
+    <div
+      data-slot="actions"
+      className={`flex items-center flex-wrap gap-[24px] ${light ? "[&_a:not([data-slot~='primary'])]:text-[#fff] [&_a:not([data-slot~='primary'])_small]:text-[#e1e5ec]" : ""}`}
+    >
+      <Action href={whatsapp()} external>
+        Get in touch
+      </Action>
+      <a
+        className="flex items-center text-[12px] gap-[11px] [&_>_svg]:text-primary [&_small]:block [&_small]:text-muted [&_small]:text-[10px]"
+        href={business.phoneHref}
+      >
+        <Phone size={23} />
+        <span>
+          <small>Give us a call</small>
+          <strong>{business.phone}</strong>
+        </span>
+      </a>
+    </div>
+  );
+}
+
 export function Heading({
   eyebrow,
   children,

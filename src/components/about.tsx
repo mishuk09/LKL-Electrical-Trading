@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Check, Phone, ArrowUpRight } from "lucide-react";
-import { business, photos, whatsapp } from "@/lib/business";
-import { Action, Heading } from "./ui";
+import { Check, ArrowUpRight } from "lucide-react";
+import { business, photos } from "@/lib/business";
+import { ContactActions, Heading } from "./ui";
 
 export default function About() {
   return (
@@ -89,24 +89,7 @@ export default function About() {
         <div className="pt-[23px] pr-[23px] pb-[23px] pl-[23px] bg-soft rounded-[var(--radius)] [&_h3]:text-[18px] [&_p]:text-[12px] [&_p]:mt-[8px] [&_p]:mr-0 [&_p]:mb-[18px] [&_p]:ml-0 [@media(width<=560px)]:[&_[data-slot~='actions']]:gap-[20px]">
           <h3>Your comfort, taken care of.</h3>
           <p>Tell us what you need. We’ll help you find the right solution.</p>
-          <div
-            data-slot="actions"
-            className="flex items-center flex-wrap gap-[24px]"
-          >
-            <Action href={whatsapp()} external>
-              Get in touch
-            </Action>
-            <a
-              className="flex items-center text-[12px] gap-[11px] [&_>_svg]:text-primary [&_small]:block [&_small]:text-muted [&_small]:text-[10px]"
-              href={business.phoneHref}
-            >
-              <Phone size={23} />
-              <span>
-                <small>Give us a call</small>
-                <strong>{business.phone}</strong>
-              </span>
-            </a>
-          </div>
+          <ContactActions />
         </div>
       </div>
       <div className="col-[1/-1] flex items-center justify-between [@media(width<=850px)]:justify-center [border-top:1px_solid_var(--line)] [border-bottom:1px_solid_var(--line)] pt-[28px] pr-0 pb-[28px] pl-0 gap-[30px] [@media(560px<width<=850px)]:gap-[25px] [@media(width<=560px)]:gap-[20px] [&_>_span:first-child]:text-[9px] [&_>_span:first-child]:tracking-[1.5px] [&_>_span:first-child]:text-muted [&_[data-slot~='daikin']]:text-[29px] [@media(width<=560px)]:[&_[data-slot~='daikin']]:text-[25px] [&_[data-slot~='daikin']]:italic [&_[data-slot~='daikin']]:tracking-[-1px] [&_[data-slot~='daikin']]:text-[#257eaa] [&_[data-slot~='midea']]:text-[29px] [@media(width<=560px)]:[&_[data-slot~='midea']]:text-[25px] [&_[data-slot~='midea']]:tracking-[-1px] [&_[data-slot~='midea']]:text-[#277aa4] [&_p]:text-[12px] [&_p_strong]:text-ink [@media(width<=850px)]:flex-wrap [@media(width<=850px)]:[&_>_span:first-child]:w-full [@media(width<=850px)]:[&_>_span:first-child]:text-center [@media(width<=560px)]:[&_p]:text-center [@media(width<=560px)]:[&_p]:w-full">
