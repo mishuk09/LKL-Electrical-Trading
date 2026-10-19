@@ -1,4 +1,5 @@
 import { ArrowUpRight, Phone, Wind } from "lucide-react";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { business, whatsapp } from "@/lib/business";
 
@@ -35,13 +36,28 @@ export function ContactActions({
   return (
     <div
       data-slot="actions"
-      className={`flex items-center flex-wrap gap-[24px] ${light ? "[&_a:not([data-slot~='primary'])]:text-[#fff] [&_a:not([data-slot~='primary'])_small]:text-[#e1e5ec]" : ""}`}
+      className={`flex items-center flex-wrap gap-[24px] ${light ? "[&_small]:text-[#e1e5ec]" : ""}`}
     >
-      <Action href={whatsapp()} external>
-        Get in touch
-      </Action>
       <a
-        className="flex items-center text-[12px] gap-[11px] [&_>_svg]:text-primary [&_small]:block [&_small]:text-muted [&_small]:text-[10px]"
+        className="inline-flex shrink-0 items-center justify-between h-[52px] rounded-[30px] pt-[9px] pr-[10px] pb-[9px] pl-[18px] whitespace-nowrap text-[#fff] text-[13px] font-bold [transition:background_0.2s,_transform_0.2s] gap-[14px] bg-[#42b94f] [&:hover]:bg-[#50CC5D] [&:hover]:[transform:translateY(-2px)]"
+        href={whatsapp()}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src="/images/whatsapp.webp"
+          alt=""
+          width={24}
+          height={24}
+          className="h-[24px] w-[24px] object-contain"
+        />
+        Get in touch
+        <span className="grid place-items-center w-[34px] h-[34px] rounded-[50%] bg-white text-[#50CC5D]">
+          <ArrowUpRight size={18} />
+        </span>
+      </a>
+      <a
+        className="inline-flex shrink-0 items-center h-[52px] rounded-[30px] bg-primary pt-[9px] pr-[20px] pb-[9px] pl-[18px] whitespace-nowrap text-[#fff] text-[12px] gap-[11px] [transition:background_0.2s,_transform_0.2s] [&:hover]:bg-primary-dark [&:hover]:[transform:translateY(-2px)] [&_>_svg]:text-[#fff] [&_small]:block [&_small]:text-[#ffffffcc] [&_small]:text-[10px] [&_span]:leading-[1.2]"
         href={business.phoneHref}
       >
         <Phone size={23} />
