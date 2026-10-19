@@ -9,6 +9,7 @@ import {
 import { business, navigation, photos, whatsapp } from "@/lib/business";
 import { Action } from "./ui";
 import MainLogo from "./mainlogo";
+import WhatsAppWidget from "./whatsapp-widget";
 export default function Footer() {
   return (
     <>
@@ -136,15 +137,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <a
-        className="fixed bottom-[24px] [@media(width<=560px)]:bottom-[18px] right-[24px] [@media(width<=560px)]:right-[15px] z-[30] grid place-items-center bg-primary text-[#fff] w-[52px] [@media(width<=560px)]:w-[48px] h-[52px] [@media(width<=560px)]:h-[48px] rounded-[50%] [box-shadow:0_4px_15px_#0003] [border:3px_solid_white]"
-        href={whatsapp()}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with LKL on WhatsApp"
-      >
-        <MessageCircle size={25} />
-      </a>
+      <WhatsAppWidget />
     </>
   );
 }
